@@ -2,10 +2,10 @@ name: Spring Boot Build
 
 on:
   workflow_dispatch:
-  
+
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
