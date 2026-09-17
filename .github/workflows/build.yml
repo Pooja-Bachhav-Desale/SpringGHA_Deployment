@@ -32,10 +32,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lowercase repository name for Docker tag
+      - name: Set image tag
         run: |
-          echo "IMAGE_TAG=ghcr.io/${{ github.repository_owner }}/itp-jan2026-springboot:latest" >> $GITHUB_ENV
-
+          echo "IMAGE_TAG=ghcr.io/pooja-bachhav-desale/itp-jan2026-springboot:latest" >> $GITHUB_ENV
+          
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
